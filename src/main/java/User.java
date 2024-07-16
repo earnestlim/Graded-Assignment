@@ -1,14 +1,16 @@
 
 public class User {
-	 public User(String name, String password, String email) {
+	 public User(String name, String password, String email, String number) {
 		super();
 		this.name = name;
 		this.password = password;
 		this.email = email;
+		this.number = number;
 	}
 	protected String name;
 	 protected String password;
 	 protected String email;
+	 protected String number;
 		// TODO Auto-generated constructor stub
 	public String getName() {
 		return name;
@@ -28,7 +30,12 @@ public class User {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	
+	public String getNumber() {
+		return number;
+	}
+	public void setNumber(String number) {
+		this.number = number;
+	}
 	 }
 	 
 	 
