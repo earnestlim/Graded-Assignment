@@ -1,7 +1,11 @@
 
 public class Product {
+
 	 private String material;
 	public Product(String name, int quantity, String size , String color, String material) {
+
+	 public Product(String name, int quantity, String size , String color, String material) {
+
 		super();
 		this.name = name;
 		this.quantity = quantity;
@@ -15,6 +19,7 @@ public class Product {
 	protected int quantity;
 	protected String size;
 	protected String color;
+	protected String material;
 		// TODO Auto-generated constructor stub
 	public String getName() {
 		return name;
@@ -39,6 +44,12 @@ public class Product {
 	}
 	public void setcolor(String color) {
 		this.color = color;
+	}
+		public String getmaterial() {
+			return size;
+		}
+		public void setmaterial(String material) {
+			this.material = material;
 	
 	}
 }
