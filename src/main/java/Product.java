@@ -1,11 +1,14 @@
 
 public class Product {
-	 public Product(String name, int quantity, String size , String color) {
+	 private String material;
+	public Product(String name, int quantity, String size , String color, String material) {
 		super();
 		this.name = name;
 		this.quantity = quantity;
 		this.size = size;
 		this.color = color;
+		this.material = material;
+	
 		
 	}
 	protected String name;
