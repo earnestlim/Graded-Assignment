@@ -73,7 +73,8 @@ public class ProductListServlet extends HttpServlet {
 				int quantity = rs.getInt("quantity");
 				String size = rs.getString("size");
 				String color = rs.getString("color");
-				Products.add(new Product(name, quantity, size, color));
+				String material = rs.getString("material");
+				Products.add(new Product(name, quantity, size, color,material));
 			}
 		} catch (SQLException e) {
 			System.out.println(e.getMessage());
@@ -91,7 +92,7 @@ public class ProductListServlet extends HttpServlet {
 		// get parameter passed in the URL
 
 		String name = request.getParameter("name");
-		Product existingProduct = new Product("", 0, "","");
+		Product existingProduct = new Product("", 0, "","","");
 
 		// Step 1: Establishing a Connection
 
@@ -112,7 +113,8 @@ public class ProductListServlet extends HttpServlet {
 				int quantity = rs.getInt("quantity");
 				String size = rs.getString("size");
 				String color = rs.getString("color");
-				existingProduct = new Product(name, quantity,size, color);
+				String material = rs.getString("material");
+				existingProduct = new Product(name, quantity,size, color,material);
 			}
 		} catch (SQLException e) {
 			System.out.println(e.getMessage());
